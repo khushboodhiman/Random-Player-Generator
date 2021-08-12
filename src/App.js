@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import names from './players';
+import {changeTurn} from './changeTurn';
 
 function App() {
+  let player = names[Math.floor(Math.random() * names.length)];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h1 className='player'>{player}</h1>
+        <p>It's your turn!</p>
+        <div className="actions">
+          <button onClick={changeTurn} className="btn btn-secondary">Skip my turn</button>
+          <button onClick={changeTurn} className="btn btn-primary">Who's Next?</button>
+        </div>
     </div>
   );
 }
