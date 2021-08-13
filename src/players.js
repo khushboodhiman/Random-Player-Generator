@@ -17,7 +17,8 @@ const Players = [
     'Satnam',
     'The Ghost',
     'Godfather',
-    'Varmillion'
+    'Varmillion',
+    'Shaina'
 ];
 
 module.exports = Players;
